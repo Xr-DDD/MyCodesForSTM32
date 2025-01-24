@@ -42,7 +42,7 @@ typedef struct
 /*******************************************************************************************************************/
 void HCSR04_Start(void);
 void HCSR04_Stop(void);
-void HCSR04_TIM_OverFlow(HCSR04_ValueStructure* hcsr04, TIM_HandleTypeDef *htim); //在溢出中断回调中使用
+void HCSR04_TIM_Overflow(HCSR04_ValueStructure* hcsr04, TIM_HandleTypeDef *htim); //在溢出中断回调中使用
 void HCSR04_TIM_InputCapture(HCSR04_ValueStructure* hcsr04, TIM_HandleTypeDef *htim); //在捕获中断回调中使用
 void HCSR04_SendTrig(void);
 void HCSR04_GetDistance(HCSR04_ValueStructure* hcsr04);
@@ -50,7 +50,7 @@ void HCSR04_GetDistance(HCSR04_ValueStructure* hcsr04);
 // /* 溢出中断回调 */
 // void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 // {
-//     HCSR04_TIM_OverFlow(&hcsr04, htim);
+//     HCSR04_TIM_Overflow(&hcsr04, htim);
 // }
 // /* 捕获中断回调 */
 // void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
