@@ -1,4 +1,4 @@
-#include "(*pid).h"
+#include "pid.h"
 
 void PID_Init(PID_ValueStructure* pid)
 {
