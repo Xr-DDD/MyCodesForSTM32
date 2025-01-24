@@ -14,7 +14,7 @@ void HCSR04_Stop(void)
     HAL_TIM_IC_Stop_IT(HCSR04_TIM_HANDLE,HCSR04_TIM_CHANNEL_2);
 }
 
-void HCSR04_TIM_OverFlow(HCSR04_ValueStructure* hcsr04, TIM_HandleTypeDef *htim) //在溢出中断回调中使用
+void HCSR04_TIM_Overflow(HCSR04_ValueStructure* hcsr04, TIM_HandleTypeDef *htim) //在溢出中断回调中使用
 {
     if(HCSR04_TIM_X == htim->Instance)
     {
