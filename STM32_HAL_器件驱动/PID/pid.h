@@ -18,10 +18,4 @@ float PID_Diff_Control(PID_ValueStructure* pid, float target, float feedback);
 
 
 #endif
-/*example*/
-/*
-    motor_speed = PID_Position(&pid, 0, mpu6050.pitch);
-    MOTOR_SetSpeed(motor_speed);
-
-*/
 
