@@ -1,7 +1,7 @@
 #include "hx1838.h"
 
 /********************************************************************************* */
-uint8_t hx1838_equal(uint16_t width1, uint16_t width2)
+static uint8_t hx1838_equal(uint16_t width1, uint16_t width2)
 {
     if(width1 > width2)
     {
