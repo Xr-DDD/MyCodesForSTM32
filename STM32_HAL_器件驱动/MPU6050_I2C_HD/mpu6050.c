@@ -1,6 +1,10 @@
 #include "mpu6050.h"
 #include "math.h"
 
+static void MPU6050_Delay(uint8_t delayms)
+{
+    HAL_Delay(delayms);
+}
 /*********************************************************************************************************/
 void MPU6050_WriteReg(uint8_t reg_addr, uint8_t byte)
 {
@@ -24,11 +28,6 @@ void MPU6050_ReadMultiReg(uint8_t fst_reg_addr, uint8_t* p_byte, uint8_t byte_si
     HAL_I2C_Mem_Read(MPU6050_I2C_HANDLE, MPU6050_SLAVE_ADDR, fst_reg_addr,I2C_MEMADD_SIZE_8BIT, p_byte, byte_size, 1000);
 }
 /*********************************************************************************************************/
-void MPU6050_Delay(uint8_t delayms)
-{
-    HAL_Delay(delayms);
-}
-
 void MPU6050_Init(void)
 {
     MPU6050_WriteReg(MPU6050_PWR_MGMT_1,0x80); //复位
