@@ -15,7 +15,7 @@
     需要开启：
     定时器捕获中断 + 定时器溢出中断
 */
-
+/********************************************************************************* */
 #define HX1838_TIM_X                        (TIM1)
 #define HX1838_TIM_HANDLE                   (&htim1)
 #define HX1838_TIM_CHANNEL_1                (TIM_CHANNEL_1)
@@ -23,7 +23,13 @@
 #define HX1838_HAL_TIM_ACTIVE_CHANNEL_1     (HAL_TIM_ACTIVE_CHANNEL_1)
 #define HX1838_HAL_TIM_ACTIVE_CHANNEL_2     (HAL_TIM_ACTIVE_CHANNEL_2)
 #define HX1838_TIM_UPDATE_VALUE             (65536)
-
+/********************************************************************************* */
+#define IR_KEY_5    (56)
+#define IR_KEY_2    (24)
+#define IR_KEY_8    (74)
+#define IR_KEY_4    (16)
+#define IR_KEY_6    (90)
+/********************************************************************************* */
 typedef struct
 {
     uint8_t capture_isbusy;             //定时器捕获忙
